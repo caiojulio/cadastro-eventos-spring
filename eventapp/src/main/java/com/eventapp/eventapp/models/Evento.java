@@ -1,10 +1,26 @@
 package com.eventapp.eventapp.models;
 
+
+import jakarta.persistence.*;
+
+@Entity
 public class Evento {
 
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private int codigo;
+
+    @Column(name="nome")
     private String nome;
+
+    @Column(name="local")
     private String local;
+
+    @Column(name="data")
     private String data;
+
+    @Column(name="horario")
     private String horario;
 
 
